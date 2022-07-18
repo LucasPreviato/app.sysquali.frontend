@@ -1,5 +1,5 @@
 import { AlternetTheme } from "./components/AlternetTheme";
-import { Sidebar } from "./components/Sidebar/Sidebar";
+import { Sidebar } from "./components/Sidebar/Index";
 
 
 export default function App() {

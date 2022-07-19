@@ -6,139 +6,140 @@ export const sideButtonsTypes = {
     ROTINA: {
         title: 'Rotina',
         image: {
-            source :"" ,
+            source: "",
             alt: "Imagem de rotina"
         }
     },
     RH: {
         title: 'RH',
         image: {
-            source :"" ,
+            source: "",
             alt: "Imagem de rotina"
         }
-    }, 
+    },
     EQUIPAMENTOS: {
         title: 'Equipamentos',
         image: {
-            source :"" ,
+            source: "",
             alt: "Imagem de rotina"
         }
-    }, 
+    },
     AUDITORIAS: {
         title: 'Auditorias',
         image: {
-            source :"" ,
+            source: "",
             alt: "Imagem de rotina"
         }
-    }, 
+    },
     FORNECEDORES: {
         title: 'Fornecedores',
         image: {
-            source :"" ,
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    CADASTRO : {
+    CADASTRO: {
         title: 'Cadastro',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    RELATORIOS : {
+    RELATORIOS: {
         title: 'Relatórios',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    INDICADORES : {
+    INDICADORES: {
         title: 'Indicadores',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    DOCUMENTOS : {
+    DOCUMENTOS: {
         title: 'Documentos',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    CONTRATOS : {
+    CONTRATOS: {
         title: 'Contratos',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    MANUTENCAO : {
+    MANUTENCAO: {
         title: 'Manutenção',
-        image :{
-            source : "",
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    TECNICOS : {
+    TECNICOS: {
         title: 'Técnicos',
-        image :{
-            source : "",
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    CONTROLES : {
+    CONTROLES: {
         title: 'Controles',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    CHAMADOS : {
+    CHAMADOS: {
         title: 'Chamados',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    OUTROS : {
+    OUTROS: {
         title: 'Outros',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    TIMANUTENCAO : {
+    TIMANUTENCAO: {
         title: 'Ti/manutenção',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    MEDICOS : {
+    MEDICOS: {
         title: 'Médicos',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    UTIS : {
+    UTIS: {
         title: 'Utils',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    IMPORTACOES : {
+    IMPORTACOES: {
         title: 'Importações',
-        image :{
-            source :"" ,
+        image: {
+            source: "",
             alt: "Imagem de rotina"
         }
     },
-    
+
 
 }
+
 export type SideButtonsType = keyof typeof sideButtonsTypes;
 
 

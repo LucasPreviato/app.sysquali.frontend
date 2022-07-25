@@ -1,160 +1,17 @@
 import { Popover } from "@headlessui/react";
 import { Separator } from "./Separator";
 import { SideButtons } from "./SideButtons";
-import Rotina from "../assets/img/imgsidebar/Auditorias.svg"
+import Rotina from "../assets/img/imgsidebar/Rotina.svg"
 // import RH from "../assets/img/imgsidebar/Rh.png"
-// import Auditorias from "../assets/img/imgsidebar/Auditorias.png"
-// import Equipamentos from "../assets/img/imgsidebar/Equipamentos.png"
-// import auditorias from "../assets/img/imgsidebar/Auditorias.png"
-// import auditorias from "../assets/img/imgsidebar/Auditorias.png"
-// import auditorias from "../assets/img/imgsidebar/Auditorias.png"
-// import auditorias from "../assets/img/imgsidebar/Auditorias.png"
-// export const sideButtonsTypes = {
-//     ROTINA: {
-//         title: 'Rotina',
-//         image: {
-//             source: Rotina,
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     RH: {
-//         title: 'RH',
-//         image: {
-//             source: RH,
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     EQUIPAMENTOS: {
-//         title: 'Equipamentos',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     AUDITORIAS: {
-//         title: 'Auditorias',
-//         image: {
-//             source: auditorias,
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     FORNECEDORES: {
-//         title: 'Fornecedores',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     CADASTRO: {
-//         title: 'Cadastro',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     RELATORIOS: {
-//         title: 'Relatórios',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     INDICADORES: {
-//         title: 'Indicadores',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     DOCUMENTOS: {
-//         title: 'Documentos',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     CONTRATOS: {
-//         title: 'Contratos',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     MANUTENCAO: {
-//         title: 'Manutenção',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     TECNICOS: {
-//         title: 'Técnicos',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     CONTROLES: {
-//         title: 'Controles',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     CHAMADOS: {
-//         title: 'Chamados',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     OUTROS: {
-//         title: 'Outros',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     TIMANUTENCAO: {
-//         title: 'Ti/manutenção',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     MEDICOS: {
-//         title: 'Médicos',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     UTIS: {
-//         title: 'Utils',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-//     IMPORTACOES: {
-//         title: 'Importações',
-//         image: {
-//             source: "",
-//             alt: "Imagem de rotina"
-//         }
-//     },
-
-
-// }
-
-// export type SideButtonsType = keyof typeof sideButtonsTypes;
-
+import RH from "../assets/img/imgsidebar/RH.svg"
+import Equipamentos from "../assets/img/imgsidebar/Equipamentos.svg"
+import auditorias from "../assets/img/imgsidebar/Auditorias.svg"
 
 export function Sidebar() {
     const Menus = [
         { title: "Rotina", src: Rotina },
-        // { title: "RH", src: "R },
-        // { title: "Equipamentos", src: "Equipamentos" },
+        { title: "RH", src: RH},
+        { title: "Equipamentos", src: Equipamentos },
     ];
 
 
@@ -170,18 +27,19 @@ export function Sidebar() {
                         <span className="text-zinc-100 pl-2 ">SysQuali</span>
                     </span>
                 </Popover.Button>
-
-                <div>
-                    <ul>
+                <Separator />
+                <Popover.Button className=" flex flex-col ">
+                    <ul className="bg-sysquali-600 px-3 h-12 ">
                         {Menus.map((menu, index) => (
                             <li key={index} className="text-zinc-100">
-                                <img className="w-7 h-7" src={`../assets/img/imgsidebar/${menu.src}`} />
+                                <img className="w-7 h-7" src={`${menu.src}`} />
+                                {/* <span>{menu.title}</span> */}
                             </li>
                         ))}
                     </ul>
-                </div>
+                </Popover.Button>
                 {/* <SideButtons /> */}
-                <Separator />
+                
             </Popover>
         </>
     )

@@ -2,17 +2,9 @@ import { Popover } from "@headlessui/react";
 import { Separator } from "./Separator";
 import { SideButtons } from "./SideButtons";
 import Rotina from "../assets/img/imgsidebar/Rotina.svg"
-// import RH from "../assets/img/imgsidebar/Rh.png"
-import RH from "../assets/img/imgsidebar/RH.svg"
-import Equipamentos from "../assets/img/imgsidebar/Equipamentos.svg"
-import auditorias from "../assets/img/imgsidebar/Auditorias.svg"
 
 export function Sidebar() {
-    const Menus = [
-        { title: "Rotina", src: Rotina },
-        { title: "RH", src: RH},
-        { title: "Equipamentos", src: Equipamentos },
-    ];
+    
 
 
     return (
@@ -28,17 +20,8 @@ export function Sidebar() {
                     </span>
                 </Popover.Button>
                 <Separator />
-                <Popover.Button className=" flex flex-col ">
-                    <ul className="bg-sysquali-600 px-3 h-12 ">
-                        {Menus.map((menu, index) => (
-                            <li key={index} className="text-zinc-100">
-                                <img className="w-7 h-7" src={`${menu.src}`} />
-                                {/* <span>{menu.title}</span> */}
-                            </li>
-                        ))}
-                    </ul>
-                </Popover.Button>
-                {/* <SideButtons /> */}
+                
+                <SideButtons />
                 
             </Popover>
         </>

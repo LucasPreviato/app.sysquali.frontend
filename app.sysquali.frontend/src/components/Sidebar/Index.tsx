@@ -1,10 +1,22 @@
 import { Popover } from "@headlessui/react";
 import { Separator } from "./Separator";
 import { SideButtons } from "./SideButtons";
-import Rotina from "../assets/img/imgsidebar/Rotina.svg"
+import Rotina from "../assets/img/imgsidebar/iconRotina.svg"
+import RH from "../assets/img/imgsidebar/iconRH.svg"
+import Equipamentos from "../assets/img/imgsidebar/iconEquipamento.svg"
+import Auditorias from "../assets/img/imgsidebar/iconAuditoria.svg"
+import Fornecedores from "../assets/img/imgsidebar/iconFornecedores.svg"
+import Cadastro from "../assets/img/imgsidebar/iconCadastro.svg"
 
 export function Sidebar() {
-
+    const Menus = [
+        { title: "Rotina", src: Rotina, alt: "Imagem de Rotina" },
+        { title: "RH", src: RH, alt: "Imagem de RH" },
+        { title: "Equipamentos", src: Equipamentos, alt: "Imagem de Equipamentos" },
+        { title: "Auditorias", src: Auditorias, alt: "Imagem de Auditorias" },
+        { title: "Fornecedores", src: Fornecedores, alt: "Imagem de Fornecedores" },
+        { title: "Cadastro", src: Cadastro, alt: "Imagem de Cadastro" },
+    ];
 
 
     return (
@@ -21,8 +33,19 @@ export function Sidebar() {
                 </Popover.Button>
                 <Separator />
 
-                <SideButtons />
+                <ul className="flex flex-col gap-2  ">
 
+                    {Menus.map((menu, index) => (
+                        <li key={index} className="group-hover:max-w-xs">
+                            <Popover.Button className=" text-zinc-100 bg-sysquali-600 w-12 h-12 px-3 rounded-full flex items-center  ">
+                                <img className="w-7 h-7 " src={`${menu.src}`} alt={`${menu.alt}`} />
+                                <span className="max-w-0 overflow-hidden group-hover:overflow-visible">
+                                    <span className="pl-2">{menu.title}</span>
+                                </span>
+                            </Popover.Button>
+                        </li>
+                    ))}
+                </ul>
             </Popover>
         </>
     )

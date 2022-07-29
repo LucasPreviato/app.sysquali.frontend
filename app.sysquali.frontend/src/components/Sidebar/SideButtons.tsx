@@ -8,25 +8,29 @@ import Cadastro from "../assets/img/imgsidebar/iconCadastro.svg"
 
 export function SideButtons() {
   const Menus = [
-    { title: "Rotina", src: Rotina },
-    { title: "RH", src: RH },
-    { title: "Equipamentos", src: Equipamentos },
-    { title: "Auditorias", src: Auditorias },
-    { title: "Fornecedores", src: Fornecedores },
-    { title: "Cadastro", src: Cadastro },
+    { title: "Rotina", src: Rotina, alt: "Imagem de Rotina" },
+    { title: "RH", src: RH, alt: "Imagem de RH" },
+    { title: "Equipamentos", src: Equipamentos, alt: "Imagem de Equipamentos" },
+    { title: "Auditorias", src: Auditorias, alt: "Imagem de Auditorias" },
+    { title: "Fornecedores", src: Fornecedores, alt: "Imagem de Fornecedores" },
+    { title: "Cadastro", src: Cadastro, alt: "Imagem de Cadastro" },
   ];
   return (
     <Popover className=" pt-2 ">
-      <Popover.Button className=" flex flex-col  ">
-        <ul className=" ">
-          {Menus.map((menu, index) => (
-            <li key={index} className="text-zinc-100 bg-sysquali-600 w-12 h-12 px-3 rounded-full flex items-center">
-              <img className="w-7 h-7" src={`${menu.src}`} />
-              <span>{menu.title}</span>
-            </li>
-          ))}
-        </ul>
-      </Popover.Button>
-    </Popover>
+
+      <ul className="flex flex-col gap-2  ">
+
+        {Menus.map((menu, index) => (
+          <li key={index} className="">
+            <Popover.Button className=" text-zinc-100 bg-sysquali-600 w-12 h-12 px-3 rounded-full flex items-center group ">
+              <img title="" className="w-7 h-7 " src={`${menu.src}`} alt={`${menu.alt}`} />
+              <span className="max-w-0 overflow-hidden group-hover:max-w-full transition-all">
+                <span className="pt-2">{menu.title}</span>
+              </span>
+            </Popover.Button>
+          </li>
+        ))}
+      </ul>
+    </Popover >
   )
 }
